@@ -129,6 +129,7 @@ with st.sidebar:
     # choice = st.radio(
     #     "Navigation", ["Upload", "Detect columns types , null values", "Modelling", "Download"])
     st.info("This application helps you explore and build your data.")
+    st.info(" https://github.com/mohamadbakri/MBakri_ByCaret")
 
 
 st.title("Upload Your Dataset")
@@ -233,6 +234,7 @@ if file:
     if "predct_state" not in st.session_state:
         st.session_state.predct_state = False
 
-    if predict or st.session_state.predct_state:
+    if predct or st.session_state.predct_state:
         st.session_state.predct_state = True
-        predict(df, chosen_target)
+        if predict:
+            predict(df, chosen_target)
