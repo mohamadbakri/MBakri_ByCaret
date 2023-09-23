@@ -236,5 +236,5 @@ if file:
 
     if predct or st.session_state.predct_state:
         st.session_state.predct_state = True
-        if predict:
+        if predct:
             predict(df, chosen_target)
